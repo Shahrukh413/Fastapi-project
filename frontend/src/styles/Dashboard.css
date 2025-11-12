@@ -1,0 +1,281 @@
+/* ================= Dashboard ================= */
+.dashboard {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+  perspective: 1200px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.content {
+  max-width: 900px;
+  width: 95%;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 25px;
+  padding: 2rem;
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.2),
+              -10px -10px 30px rgba(255,255,255,0.7);
+  transform: rotateY(0deg);
+  transition: all 0.3s ease;
+}
+
+.content h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  transition: color 0.3s ease;
+}
+
+/* Book list */
+.book-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.book-list li {
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  margin: 0.5rem 0;
+  padding: 12px 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2),
+              -5px -5px 15px rgba(255,255,255,0.7);
+  transition: all 0.3s ease;
+}
+
+.book-list li:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Edit & Delete buttons and inputs */
+.book-list li input,
+.book-list li button {
+  margin-left: 5px;
+  border-radius: 12px;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.2),
+              -3px -3px 8px rgba(255,255,255,0.7);
+}
+
+.book-list li input {
+  padding: 8px;
+  width: 60%;
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+}
+
+.book-list li button {
+  background: linear-gradient(145deg, #6a5acd, #483d8b);
+  color: #fff;
+  font-weight: bold;
+}
+
+.book-list li button:hover {
+  background: linear-gradient(145deg, #483d8b, #6a5acd);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Book form */
+.book-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.5rem 0;
+  gap: 1rem;
+}
+
+.book-form input {
+  flex: 1 1 40%;
+  min-width: 150px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1),
+              inset -5px -5px 10px rgba(255,255,255,0.7);
+}
+
+.book-form button {
+  flex: 1 1 20%;
+  min-width: 120px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  background: linear-gradient(145deg, #6a5acd, #483d8b);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.book-form button:hover {
+  background: linear-gradient(145deg, #483d8b, #6a5acd);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  border-radius: 15px;
+  border: none;
+  margin-bottom: 1rem;
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1),
+              inset -5px -5px 10px rgba(255,255,255,0.7);
+}
+
+/* ================= Dark Mode ================= */
+body.dark .dashboard {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+body.dark .content {
+  background: #2c2c2c;
+  color: #f0f0f0;
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.5),
+              -10px -10px 30px rgba(255,255,255,0.05);
+}
+
+body.dark .book-list li {
+  background: #3c3c3c;
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.3),
+              inset -5px -5px 10px rgba(255,255,255,0.05);
+}
+
+body.dark .book-list li input {
+  background: #3c3c3c;
+  color: #f0f0f0;
+}
+
+body.dark .book-list li button,
+body.dark .book-form button {
+  background: linear-gradient(145deg, #6a5acd, #483d8b);
+  color: #fff;
+}
+.book-actions button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin-left: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.book-item:hover {
+  background: #dee2e6;
+}
+
+/* === Book Info === */
+.book-display {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.book-info {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #212529;
+}
+
+/* === Buttons (Edit / Delete) === */
+.book-actions button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin-left: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.book-actions button:first-child {
+  background-color: #17a2b8; /* Edit button */
+}
+
+.book-actions button:last-child {
+  background-color: #dc3545; /* Delete button */
+}
+
+.book-actions button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* === Edit Mode === */
+.edit-section {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.edit-section input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.edit-section input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+.edit-buttons button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.edit-buttons button:first-child {
+  background-color: #28a745; /* Save */
+}
+
+.edit-buttons button:last-child {
+  background-color: #6c757d; /* Cancel */
+}
+
+.edit-buttons button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .book-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book-actions {
+    margin-top: 10px;
+  }
+}

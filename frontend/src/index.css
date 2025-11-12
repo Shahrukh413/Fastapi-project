@@ -1,0 +1,58 @@
+/* Reset and full height */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Default light theme */
+body.light {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Default light theme */
+body.light {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Dark theme */
+body.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* Cards (Login, Signup, Dashboard) */
+body.dark .login-form,
+body.dark .signup-form,
+body.dark .content {
+  background: #2c2c2c;
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.5),
+              -10px -10px 30px rgba(255,255,255,0.05);
+  color: #f0f0f0;
+}
+
+/* Inputs */
+body.dark input,
+body.dark .book-form input,
+body.dark .search-bar {
+  background: #3c3c3c;
+  color: #f0f0f0;
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.5),
+              inset -5px -5px 10px rgba(255,255,255,0.05);
+  border: none;
+}
+
+/* Buttons */
+body.dark button {
+  background: linear-gradient(145deg, #6a5acd, #483d8b);
+  color: #fff;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3),
+              -5px -5px 15px rgba(255,255,255,0.1);
+}

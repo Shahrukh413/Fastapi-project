@@ -1,0 +1,44 @@
+/* ================= Light Theme ================= */
+.search-bar {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 15px;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1),
+              inset -5px -5px 10px rgba(255,255,255,0.7);
+  transition: all 0.3s ease;
+}
+
+/* Focus effect */
+.search-bar:focus {
+  outline: none;
+  box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2),
+              inset -3px -3px 6px rgba(255,255,255,0.6);
+}
+
+/* Placeholder style */
+.search-bar::placeholder {
+  color: #999;
+}
+
+/* ================= Dark Theme ================= */
+body.dark .search-bar {
+  background: #3c3c3c;
+  color: #f0f0f0;
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.5),
+              inset -5px -5px 10px rgba(255,255,255,0.05);
+}
+
+/* Dark mode focus effect */
+body.dark .search-bar:focus {
+  box-shadow: inset 3px 3px 6px rgba(0,0,0,0.6),
+              inset -3px -3px 6px rgba(255,255,255,0.1);
+}
+
+/* Dark mode placeholder */
+body.dark .search-bar::placeholder {
+  color: #ccc;
+}

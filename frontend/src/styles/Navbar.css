@@ -1,0 +1,58 @@
+/* ================= Navbar ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2),
+              -5px -5px 15px rgba(255,255,255,0.7);
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.navbar .actions button {
+  margin-left: 10px;
+  padding: 6px 14px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #6a5acd, #483d8b);
+  color: #fff;
+}
+
+.navbar .actions button:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: linear-gradient(145deg, #483d8b, #6a5acd);
+}
+
+/* ================= Dark Mode ================= */
+body.dark .navbar {
+  background: #2c2c2c;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.5),
+              -5px -5px 15px rgba(255,255,255,0.05);
+}
+
+body.dark .navbar h3 {
+  color: #f0f0f0;
+}
+
+body.dark .navbar .actions button {
+  background: linear-gradient(145deg, #6a5acd, #483d8b);
+  color: #fff;
+}
+
+body.dark .navbar .actions button:hover {
+  background: linear-gradient(145deg, #483d8b, #6a5acd);
+}

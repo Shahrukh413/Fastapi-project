@@ -1,0 +1,50 @@
+/* Theme toggle container */
+.theme-toggle {
+  width: 60px;
+  height: 30px;
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2),
+              -5px -5px 15px rgba(255,255,255,0.7);
+  transition: all 0.3s ease;
+}
+
+/* Toggle circle */
+.theme-toggle .circle {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(145deg, #ffffff, #d1d1d1);
+  border-radius: 50%;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2),
+              -3px -3px 10px rgba(255,255,255,0.7);
+  transition: all 0.3s ease;
+}
+
+/* Circle position for dark mode */
+.theme-toggle.dark .circle {
+  transform: translateX(30px);
+  background: linear-gradient(145deg, #6a5acd, #483d8b);
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.5),
+              -3px -3px 10px rgba(255,255,255,0.2);
+}
+
+/* Optional icon inside toggle */
+.theme-toggle .icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.theme-toggle .icon.sun {
+  color: #f1c40f;
+}
+
+.theme-toggle .icon.moon {
+  color: #2c3e50;
+}

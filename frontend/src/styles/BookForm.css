@@ -1,0 +1,62 @@
+/* src/styles/BookForm.css */
+
+/* Book form container */
+.book-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* Input fields */
+.book-form input {
+  flex: 1 1 45%;
+  min-width: 150px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: none;
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1),
+              inset -5px -5px 10px rgba(255,255,255,0.7);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.book-form input:focus {
+  outline: none;
+  box-shadow: inset 5px 5px 12px rgba(0,0,0,0.15),
+              inset -5px -5px 12px rgba(255,255,255,0.8);
+}
+
+/* Add button */
+.book-form button {
+  flex: 1 1 20%;
+  min-width: 120px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  background: linear-gradient(145deg, #6a5acd, #483d8b);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-form button:hover {
+  background: linear-gradient(145deg, #483d8b, #6a5acd);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Dark mode support */
+body.dark .book-form input {
+  background: #3c3c3c;
+  color: #f0f0f0;
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.5),
+              inset -5px -5px 10px rgba(255,255,255,0.05);
+}
+
+body.dark .book-form button {
+  background: linear-gradient(145deg, #6a5acd, #483d8b);
+  color: #fff;
+}
